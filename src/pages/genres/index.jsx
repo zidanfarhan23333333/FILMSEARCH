@@ -1,4 +1,4 @@
-const genres = () => {
+const Genres = () => {
   return (
     <div>
       <h1>GENRES</h1>
@@ -6,4 +6,4 @@ const genres = () => {
   );
 };
 
-export default genres;
+export default Genres;
