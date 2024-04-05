@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { getMovieList, searchMovie } from "./api";
+import NavigationBar from "./components/Film/NavigationBar";
 
-const App = () => {
+function App() {
   const [popularMovies, setPopularMovies] = useState([]);
 
   useEffect(() => {
@@ -13,8 +14,8 @@ const App = () => {
     fetchMovies();
   }, []);
 
-  const PopularMoviesList = () => {
-    return popularMovies.map((movie, i) => (
+  const PopularMoviesList = () =>
+    popularMovies.map((movie, i) => (
       <div key={i} className="Movie-wrapper">
         <div className="Movie-title">{movie.title}</div>
         <img
@@ -22,12 +23,10 @@ const App = () => {
           src={`${process.env.REACT_APP_BASEIMGURL}${movie.poster_path}`}
           alt="Movie Poster"
         />
-
         <div className="Movie-date">release: {movie.release_date}</div>
         <div className="Movie-rating">{movie.vote_average}</div>
       </div>
     ));
-  };
 
   const search = async (q) => {
     if (q.length > 3) {
@@ -37,11 +36,11 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div>
+      <NavigationBar />
       <header className="App-header">
-        <h1>Farhan Kebab Movies</h1>
         <input
-          placeholder="cari film kesayangan anda"
+          placeholder="Cari film kesayangan anda"
           className="Movie-search"
           onChange={({ target }) => search(target.value)}
         />
@@ -51,6 +50,6 @@ const App = () => {
       </header>
     </div>
   );
-};
+}
 
 export default App;
