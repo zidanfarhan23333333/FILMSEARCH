@@ -8,7 +8,7 @@ const NavigationBar = () => {
       <Container>
         <Navbar.Brand href="/home">FARHAN MOVIES</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" style={{display: "flex", justifyContent: "space-between"}}>
           <Nav className="mr-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
@@ -20,9 +20,9 @@ const NavigationBar = () => {
           </Nav>
           <Nav
             className="ml-auto"
-            style={{ position: "absolute", top: 0, right: 0 }}
+            style={{ background: "gray", padding: 4, color: "white", borderRadius: 5 }}
           >
-            <Link to="/api/login/signin">Sign In</Link>
+            <Link to="/login" style={{textDecoration: "none", color:"white"}}>Sign In</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
