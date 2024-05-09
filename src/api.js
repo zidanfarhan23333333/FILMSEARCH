@@ -16,3 +16,11 @@ export const searchMovie = async (q) => {
   );
   return search.data;
 };
+
+// GANTI API GWE SEK GENRE NGISOR IKI MAU RUNG ONO FUNCTION E
+export const getMovieGenres = async () => {
+  const movie = await axios.get(
+    `${baseUrl}/movie/popular?&page=1&api_key=${apiKey}`
+  );
+  return movie.data.results;
+};

@@ -1,4 +1,8 @@
-const Genres = () => {
+import { getMovieGenres } from "../../api";
+
+const Genres = async () => {
+  const result = await getMovieGenres()
+  console.log(result);
   return (
     <div>
       <h1>GENRES</h1>

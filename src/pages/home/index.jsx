@@ -16,7 +16,7 @@ function Home() {
 
   const PopularMoviesList = () =>
     popularMovies.map((movie, i) => (
-      <div key={i} className="Movie-wrapper">
+      <div key={i} className="Movie-wrapper">              
         <div className="Movie-title">{movie.title}</div>
         <img
           className="Movie-image"
