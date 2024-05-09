@@ -12,9 +12,7 @@ function Login() {
     } else if (email !== "admin@example.com" || password !== "password") {
       setError("Email atau password tidak valid");
     } else {
-      // Login berhasil, simpan token di local storage
       localStorage.setItem("token", "your-token");
-      // Redirect ke halaman dashboard
       window.location.href = "/dashboard";
     }
   };
