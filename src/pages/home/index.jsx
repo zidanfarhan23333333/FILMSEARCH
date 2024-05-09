@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getMovieList, searchMovie } from "../../api";
-import "../../App.css"
-
+import { getMovieList, searchMovie, getTopRatedMovies } from "../../api";
+import "../../App.css";
 
 function Home() {
   const [popularMovies, setPopularMovies] = useState([]);

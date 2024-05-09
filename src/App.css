@@ -54,3 +54,14 @@
   font-size: 1.2em;
   text-decoration: underline;
 }
+
+/* top rated */
+
+.Genres-container {
+  background-color: #282c34;
+  padding: 20px;
+}
+
+.Genres-title {
+  color: aliceblue;
+}

@@ -16,3 +16,10 @@ export const searchMovie = async (q) => {
   );
   return search.data;
 };
+
+export const getTopRatedMovies = async () => {
+  const response = await axios.get(
+    `${baseUrl}/movie/top_rated?&page=1&api_key=${apiKey}`
+  );
+  return response.data.results;
+};
