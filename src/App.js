@@ -28,15 +28,12 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/genres"
-            element={
-              <>
+          <Route path="/genres" element={
+            <>
                 <NavigationBar />
                 <Genres />
               </>
-            }
-          />
+          } />
         </Routes>
       </Router>
     </>
